@@ -4,55 +4,45 @@
         @section('content')
         <!--Content-->
         <div class="container">
-            <hr>
-            <h2 align="center">ARTIKEL TERBARU</h2>
-            <hr>
+        <br><br>
+        <img src="{{asset('img/iklan-olx-atas.jpg')}}" class="img-fluid" alt="iklan" style="width: 100%;"><br>
+            <li class="nav nav-item">
+                <form class="nav-link" action="{{ url('search') }}" method="post" style="margin: 0px; padding: 0px;">
+                    {{ csrf_field() }}
+                    <input type="search" id="search1" name="search" placeholder="Semua Provinsi">
+                    <input type="search" name="search" placeholder="2.569.870 Iklan di Sekitar Anda">
+                </form>
+             </li>
+            <br>
             <div class="row">
-               <div class="col-lg-9">
-                <div class="row">
-                 <div class="col-lg-4" style="margin-bottom: 20px;">
-                    <div class="card" style="height: 360px;">
-
-                        <!--Card image-->
-                        <div class="view overlay hm-white-slight">
-                            <img style="height: 160px; width: 100%;" src="" class="img-fluid" alt="">
+                <div class="col-lg-8">
+                    <div class="row">
+                    <?php 
+                       foreach ($category as $value) {  
+                    ?>
+                        <div class="col-lg-3" >
+                            <div style="border: none; margin-bottom: 0px; padding-bottom: 0px;">
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <a href="{{ url('/category/'.$value->category) }}">
+                                    <img src="{{asset('img/buku.png')}}" class="img-fluid" alt="">
+                                    <p align="center"><b>{{ $value->category }}</b></p>
+                                    </a>
+                                </div>                       
+                          </div>
                         </div>
-                        <!--/.Card image-->
-
-                        <!--Card content-->
-                        <div class="card-block">
-                            <p></p>
-                            <!--Title-->
-                            <h4 style="height: 100px;" class="card-title"><a href=""><strong></strong></a> </h4>
-                            <p style="margin: 2px;"></p>
-                        </div>
-                        <!--/.Card content-->
-
+                        <?php
+                        }
+                        ?>
                     </div>
-                    <!--/.Card-->
                 </div>
+
+
+                <div class="col-lg-4">
+                    <img src="{{asset('img/iklan-olx.png')}}" class="img-fluid" alt="">
+               </div>
             </div>
         </div>
-
-
-        <div class="col-lg-3">
-            <div class="card">
-                <!--Card content-->
-                <div class="card-block">
-                    <!--Text-->
-                    <p class="card-title" align="center"></strong><strong>Technology</strong></p>
-                    <ul>
-                     <li style="margin: 20px;"><a href="{{ url('/tech/'.'html') }}"><img style="display: inline-block;" src="{{asset('img/sidebar-logo-html.png')}}"><font>   HTML</font></a></li> 
-                     <li style="margin: 20px;"><a href="{{ url('tech/'.'javascript') }}"><img style="display: inline-block;" src="{{asset('img/sidebar-logo-js.png')}}"><font>   JavaScript</font></a></li> 
-                     <li style="margin: 20px;"><a href="{{ url('tech/'.'node') }}"><img style="display: inline-block;" src="{{asset('img/sidebar-logo-nodejs.png')}}"><font>   Node.Js</font></a></li> 
-                     <li style="margin: 20px;"><a href="{{ url('tech/'.'php') }}"><img style="display: inline-block;" src="{{asset('img/sidebar-logo-php.png')}}"><font>   PHP</font></a></li> 
-                 </ul>
-             </div>
-             <!--/.Card content-->
-
-         </div>
-         <!--/.Card-->
-     </div>
      
  </div>
 </div>

@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'Welcome@index');
+Route::get('/category/{slug}', 'Category@slug');
 
 Auth::routes();
 

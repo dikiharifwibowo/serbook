@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Sourcetika.com || Jogja Web Developer</title>
+    <title>Serbook</title>
 
 
 
@@ -102,18 +102,27 @@ input[type=search] {
     font-family: inherit;
     font-size: 100%;
 }
+input[type=search1] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+}
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
     display: none; 
 }
 
+#search1 {
+    background: #ededed url() no-repeat 9px center;
+     width: 300px;
+}
 
 input[type=search] {
     background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
     border: solid 1px #ccc;
     padding: 9px 10px 9px 32px;
-    width: 55px;
-    
+     width: 700px;
     -webkit-border-radius: 10em;
     -moz-border-radius: 10em;
     border-radius: 10em;
@@ -122,8 +131,9 @@ input[type=search] {
     -moz-transition: all .5s;
     transition: all .5s;
 }
+
 input[type=search]:focus {
-    width: 130px;
+   /* width: 130px; di klik nanti jadi pendek */  
     background-color: #fff;
     border-color: #66CC75;
     
@@ -158,34 +168,22 @@ input::-webkit-input-placeholder {
             </button>
                <a class="navbar-brand"  href="{{url('/')}}">
 
-                <strong><img src="{{ asset('img/sourcetika.png') }}" style="width: 80px; height: 30px;" ></strong>
-
+                <!-- <strong><img src="{{ asset('img/sourcetika.png') }}" style="width: 80px; height: 30px;" ></strong>
+ -->
             </a>
             <div class="collapse navbar-collapse" id="navbarNav1">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="navbar-brand" href="{{url('/')}}">SOURCETIKA</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link">Artikel<span class="sr-only">(current)</span></a>
+                        <a class="navbar-brand" href="{{url('/')}}">SerBoOk</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Video</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Event</a>
-                    </li>
-                    <li class="nav nav-item">
-                        <form class="nav-link" action="{{ url('search') }}" method="post" style="margin: 0px; padding: 0px;">
-                        {{ csrf_field() }}
-                            <input type="search" name="search" placeholder="Search">
-                        </form>
+                        <a class="nav-link">Cari Buku Cepat Beli Dekat</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
                         @if (Auth::guest())
-                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><i class="small material-icons">perm_identity</i> Akun Saya</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('register') }}"><i class="small material-icons">add</i> Pasang Iklan</a></li>
                         @else
                         <li class="nav-item dropdown btn-group">
                             <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} </a>
@@ -209,9 +207,68 @@ input::-webkit-input-placeholder {
     @yield('caroseal')
     <!--/.Navbar-->    
     @yield('content')
-    <!--Footer-->
+
+<!--Footer-->
     <footer class="page-footer center-on-small-only">
-        <!--Copyright-->
+
+        <!--Footer Links-->
+        <div class="container-fluid">
+            <div class="row">
+
+                <!--First column-->
+                <div class="col-lg-3 offset-lg-1 hidden-lg-down">
+                    <h5 class="title">ABOUT MATERIAL DESIGN</h5>
+                    <p>Material Design (codenamed Quantum Paper) is a design language developed by Google. </p>
+                </div>
+                <!--/.First column-->
+
+                <hr class="hidden-md-up">
+
+                <!--Second column-->
+                <div class="col-lg-2 col-md-4 offset-lg-1">
+                    <h5 class="title">Pusat Bantuan</h5>
+                    <ul>
+                        <li><a href="#!">Syarat & Ketentuan</a></li>
+                        <li><a href="#!">Kebijakan Privasi</a></li>
+                        <li><a href="#!">Cara Menggunakan Serbook</a></li>
+                        <li><a href="#!">Tips Jual Beli Aman</a></li>
+                    </ul>
+                </div>
+                <!--/.Second column-->
+
+                <hr class="hidden-md-up">
+
+                <!--Third column-->
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="title">Peta Situs</h5>
+                    <ul>
+                        <li><a href="#!">Iklan Berdasarkan Lokasi</a></li>
+                        <li><a href="#!">Pencarian Populer</a></li>
+                        <li><a href="#!">Join Serbook</a></li>
+                    </ul>
+                </div>
+                <!--/.Third column-->
+
+                <hr class="hidden-md-up">
+
+                <!--Fourth column-->
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="title">Follow me on</h5>
+                    <ul>
+                        <li><a href="#!">Facebook</a></li>
+                        <li><a href="#!">Instagram</a></li>
+                        <li><a href="#!">Twitter</a></li>
+                        <li><a href="#!">Pinterest</a></li>
+                    </ul>
+                </div>
+                <!--/.Fourth column-->
+
+            </div>
+        </div>
+        <!--/.Footer Links-->
+
+        <hr>
+         <!--Copyright-->
         <div class="copyright">
             <div class="container-fluid" align="center" style="height: 40px;">
                 © 2017 Copyright: <a href="http://www.MDBootstrap.com" rel="nofollow"> Sourcetika.com </a><br>
@@ -222,7 +279,6 @@ input::-webkit-input-placeholder {
 
     </footer>
     <!--/.Footer-->
-
 
     <!-- SCRIPTS -->
 
