@@ -156,7 +156,7 @@ input::-webkit-input-placeholder {
 
 
 <body>
-
+<div id=app>
 
     <!--Navbar-->
     <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
@@ -278,6 +278,7 @@ input::-webkit-input-placeholder {
         <!--/.Copyright-->
 
     </footer>
+    </div>
     <!--/.Footer-->
 
     <!-- SCRIPTS -->
