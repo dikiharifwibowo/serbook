@@ -15,17 +15,20 @@
              <div class="col-lg-12">
                 <div class="row">
                    <?php foreach ($category as $post) { ?>
-                    <div class="col-lg-2" style="margin-bottom: 20px;">
-                        <div class="card" style="height: 300px;">
+                    <div class="col-lg-3" style="margin-bottom: 20px;">
+                        <div class="card" style="height: 400px;">
 
                         <!--Card image-->
                         <div class="view overlay hm-white-slight">
-                            <img style="height: 250px; width: 100%;" src="https://ssvr.bukukita.com/babacms/displaybuku/101468_f.jpg" class="img-fluid" alt="">
+                        	<a href="{{ url('/'.$post['judul']) }}">
+	                            <img style="height: 280px; width: 100%;" src="http://i.imgur.com/eQh9otF.png" class="img-fluid" alt="">
+	                            <p align="center" style="margin: 10px;">
+	                            <b style="" class="card-title"><strong><?php echo substr(strip_tags($post['judul']),0,100); ?></strong></b>
+	                            <p style="margin: 2px;" align="center">Rp. 70.000</p>
+                            </a>
+                        </p>
                         </div>
-  					<!-- 	<p align="center">
-                            <h4 style="" class="card-title"><a href="{{ url('/'.$post->slug_judul) }}"><strong>lroem ipsuasdnasdas asdbasdkasd asdaskdas as asdas</strong></a> </h4>
-                            <p style="margin: 2px;">Rp. 70.000</p>
-                        </p> -->
+  						
                         </div>
                         <!--/.Card-->
                     </div>

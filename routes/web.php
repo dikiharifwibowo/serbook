@@ -21,3 +21,5 @@ Route::get('/category/{slug}', 'Category@slugcategory');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/{slug}','Book@detailbook');

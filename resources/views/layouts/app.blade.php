@@ -208,9 +208,13 @@ input::-webkit-input-placeholder {
     <!--/.Navbar-->    
     @yield('content')
 
-<!--Footer-->
-    <footer class="page-footer center-on-small-only">
+    <div class="container-fluid" >
+     <img src="{{ asset('/img/ftr-top-bg.png') }}">
+    </div>
 
+<!--Footer-->
+    <footer class="page-footer center-on-small-only" style="margin-top: 0px;">
+        
         <!--Footer Links-->
         <div class="container-fluid">
             <div class="row">
