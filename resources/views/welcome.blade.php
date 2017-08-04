@@ -11,7 +11,7 @@
                     {{ csrf_field() }}
                     <input type="search" style="background: #ededed url('{{ asset('theme/img/sprite-hm.png') }}') no-repeat 8px -58px;"
 " id="search1" name="search" placeholder="Semua Provinsi"  data-toggle="modal" data-target="#myModal">
-                    <input type="search" name="search" placeholder="2.569.870 Iklan di Sekitar Anda">
+                    <input type="search" name="search" placeholder="2.569.870 Buku di Sekitar Anda">
                 </form>
              </li>
             <br>

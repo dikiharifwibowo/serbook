@@ -16,7 +16,7 @@
 // });
 
 Route::get('/', 'Welcome@index');
-Route::get('/category/{slug}', 'Category@slug');
+Route::get('/category/{slug}', 'Category@slugcategory');
 
 Auth::routes();
 
