@@ -1,5 +1,6 @@
 @extends('layouts.app')
-<br><br><br>
+@extends('layouts.modal')
+<br><br><br><br><br><br>
 <div class="container">
 	<div class="row">
 		<div class="card" style="display: inline; height: 50px; width: 100%; padding: 5px;">

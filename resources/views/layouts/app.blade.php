@@ -183,7 +183,7 @@ input::-webkit-input-placeholder {
                 <ul class="navbar-nav">
                         @if (Auth::guest())
                             <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><i class="small material-icons">perm_identity</i> Akun Saya</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('register') }}"><i class="small material-icons">add</i> Pasang Iklan</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><i class="small material-icons">add</i> Pasang Iklan</a></li>
                         @else
                         <li class="nav-item dropdown btn-group">
                             <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} </a>
@@ -275,7 +275,7 @@ input::-webkit-input-placeholder {
          <!--Copyright-->
         <div class="copyright">
             <div class="container-fluid" align="center" style="height: 40px;">
-                © 2017 Copyright: <a href="http://www.MDBootstrap.com" rel="nofollow"> Sourcetika.com </a><br>
+                © 2017 Copyright: <a href="http://www.MDBootstrap.com" rel="nofollow"> Serbook.com </a><br>
 
             </div>
         </div>
@@ -304,7 +304,7 @@ input::-webkit-input-placeholder {
     <script>
     new WOW().init();
     </script>
-
+    @yield('modal')
 
 </body>
 
