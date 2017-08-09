@@ -168,8 +168,8 @@ input::-webkit-input-placeholder {
             </button>
                <a class="navbar-brand"  href="{{url('/')}}">
 
-                <!-- <strong><img src="{{ asset('img/sourcetika.png') }}" style="width: 80px; height: 30px;" ></strong>
- -->
+                <strong><img src="#" style="width: 80px; height: 30px;" ></strong>
+
             </a>
             <div class="collapse navbar-collapse" id="navbarNav1">
                 <ul class="navbar-nav mr-auto">
@@ -282,7 +282,7 @@ input::-webkit-input-placeholder {
         <!--/.Copyright-->
 
     </footer>
-    </div>
+</div>
     <!--/.Footer-->
 
     <!-- SCRIPTS -->
@@ -299,7 +299,7 @@ input::-webkit-input-placeholder {
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="{{ asset('theme/js/mdb.min.js') }}"></script>
-    <script src="{{ asset('protected/public/js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     
     <script>
     new WOW().init();

@@ -9,6 +9,11 @@
             <!-- <h4 class="modal-title">Search Location</h4> -->
             <div class="col-lg-10 location-modal-search">
               <input type="search"  placeholder="Location" style="background: #ededed url('{{ asset('theme/img/sprite-hm.png') }}') no-repeat 8px -58px; width: 300px;">
+                <template>
+                    <div class="panel-body">
+                        <autocomplete></autocomplete>
+                    </div>
+                </template>
             </div>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>

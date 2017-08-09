@@ -9,15 +9,17 @@
             <li class="nav nav-item">
                 <form class="nav-link" action="{{ url('search') }}" method="post" style="margin: 0px; padding: 0px;">
                     {{ csrf_field() }}
-                    <input type="search" style="background: #ededed url('{{ asset('theme/img/sprite-hm.png') }}') no-repeat 8px -58px;"
-" id="search1" name="search" placeholder="Semua Provinsi"  data-toggle="modal" data-target="#myModal">
+                    <input type="search" style="background: #ededed url('{{ asset('theme/img/sprite-hm.png') }}') no-repeat 8px -58px;" id="search1" name="search" placeholder="Semua Provinsi"  data-toggle="modal" data-target="#myModal">
                     <input type="search" name="search" placeholder="2.569.870 Buku di Sekitar Anda">
                 </form>
              </li>
             <br>
-
-                <example> 
-                </example>
+          <div id=app>
+        <template>
+            <example>
+            </example>
+        </template>
+    </div>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="row">

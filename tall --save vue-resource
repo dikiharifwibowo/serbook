@@ -1,0 +1,35 @@
+[33mcommit 28bc816adc1664d4651b79f5f3f401e99222ce93[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: dikih arif wibowo <dikih.wibowo@students.amikom.ac.id>
+Date:   Mon Aug 7 20:59:04 2017 +0700
+
+    fixed modal for searching book by provinsi/city
+
+[33mcommit 1ba877b5a071911386950ded928c57975fb436f9[m
+Author: dikih arif wibowo <dikih.wibowo@students.amikom.ac.id>
+Date:   Fri Aug 4 23:13:14 2017 +0700
+
+    add footer img, details book
+
+[33mcommit 607c51b65eb4695be9065a9355aa1127739d5f71[m
+Author: dikih arif wibowo <dikih.wibowo@students.amikom.ac.id>
+Date:   Fri Aug 4 19:26:30 2017 +0700
+
+    add category book page,model, and controller
+
+[33mcommit 7959e4f1bf73361c51891cdf9fb82c970601fb06[m
+Author: dikih arif wibowo <dikih.wibowo@students.amikom.ac.id>
+Date:   Mon Jul 31 17:12:49 2017 +0700
+
+    add modal search provinsi
+
+[33mcommit 8fb3bd8d03d2b93164fc3ea89cfd778cbe5a01d3[m
+Author: dikih arif wibowo <dikih.wibowo@students.amikom.ac.id>
+Date:   Sun Jul 30 14:20:09 2017 +0700
+
+    add category book in welcome view
+
+[33mcommit ec2d5ec5dc454342f1268bc86dc71660b91276b5[m
+Author: dikih arif wibowo <dikih.wibowo@students.amikom.ac.id>
+Date:   Sun Jul 23 23:02:45 2017 +0700
+
+    first commit, set template (theme in public)

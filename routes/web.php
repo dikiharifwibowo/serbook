@@ -1,5 +1,5 @@
-<?php
 
+<?php
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,11 +15,13 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'Welcome@index');
-Route::get('/category/{slug}', 'Category@slugcategory');
 
+Route::get('/', 'Welcome@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('social/login/redirect/{provider}', ['uses' => 'Auth\LoginController@redirectToProvider', 'as' => 'social.login']);
+Route::get('social/login/{provider}', 'Auth\LoginController@handleProviderCallback');
 
+Route::get('/category/{slug}', 'Category@slugcategory');
 Route::get('/{slug}','Book@detailbook');

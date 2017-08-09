@@ -1,10 +1,6 @@
 @extends('layouts.app')
 @section('login')
 <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
-@endsection
-
-@section('content')
-<br>
 
 <style type="text/css">
     /* Shared */
@@ -71,6 +67,10 @@
   background: #E74B37;
 }
 </style>
+@endsection
+
+@section('content')
+
 <br><br><br><br><br><br>
 <div class="container">
     <div class="row" >
@@ -124,7 +124,7 @@
                             </p>
                         </div>
 
-                        <div class="form-group">
+                       <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Login
@@ -134,11 +134,11 @@
                                     Forgot Your Password?
                                 </a>
                                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                    <button type="button" class="loginBtn loginBtn--facebook">
+                                    <button type="button" onclick="window.location.href='{{ route('social.login', ['facebook']) }}'" class="loginBtn loginBtn--facebook">
                                       Login with Facebook
                                     </button>
 
-                                    <button type="button" class="loginBtn loginBtn--google">
+                                    <button type="button" onclick="window.location.href='{{ route('social.login', ['google']) }}'" class="loginBtn loginBtn--google">
                                       Login with Google
                                     </button>
                             </div>
