@@ -32,7 +32,60 @@
      <style rel="stylesheet">
         /* TEMPLATE STYLES */
         /* Necessary for full page carousel*/
-        
+        .sf-back-to-top {
+    background-color: #50A1CB; /* button color */
+    color: white; /* text/arrow color */ 
+    display: none;
+    z-index: 999;
+    /* float in bottom right corner */
+    /* 20 pixels from edge */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    /* size of button is 50 pixels*/
+    width: 50px;
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    /* round button */
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+a.sf-back-to-top {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: 2px;
+    padding-top: 4px;    
+}
+
+a.sf-back-to-top .arrow:before {
+    content: "\e02d";
+    font-family: 'squarespace-ui-font';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    content: "\e02d";
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    cursor: pointer;
+    margin-left: -4px;
+}
+
         html,
         body {
             height: 100%;
@@ -150,7 +203,78 @@ input::-webkit-input-placeholder {
     color: #999;
 }
 
+/*untuk tabs*/
 
+.hide {
+        display: none;
+}
+
+.tab-content {
+        padding:25px;
+}
+
+#material-tabs {
+        position: relative;
+        display: block;
+      padding:0;
+        border-bottom: 1px solid #e0e0e0;
+}
+
+#material-tabs>a#tab2-tab,a#tab3-tab,a#tab4-tab,a#tab1-tab {
+        position: relative;
+     display:inline-block;
+        text-decoration: none;
+        padding: 22px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        color: #424f5a;
+        text-align: center;
+        outline:;
+}
+
+#material-tabs>a.active {
+        font-weight: 700;
+        outline:none;
+}
+
+#material-tabs>a:not(.active):hover {
+        background-color: inherit;
+        color: #7c848a;
+}
+
+
+.yellow-bar {
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        height: 3px;
+        background: #458CFF;
+        display: block;
+        left: 0;
+        transition: left .2s ease;
+        -webkit-transition: left .2s ease;
+}
+
+#tab1-tab.active ~ span.yellow-bar {
+        left: 0;
+        width: 80px;
+}
+
+#tab2-tab.active ~ span.yellow-bar {
+        left:84px;
+        width: 82px;
+}
+
+#tab3-tab.active ~ span.yellow-bar {
+        left: 170px;
+        width: 95px;
+}
+
+#tab4-tab.active ~ span.yellow-bar {
+        left:280px;
+        width: 105px;
+}
     </style>
 </head>
 
@@ -183,10 +307,12 @@ input::-webkit-input-placeholder {
                 <ul class="navbar-nav">
                         @if (Auth::guest())
                             <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><i class="small material-icons">perm_identity</i> Akun Saya</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><i class="small material-icons">add</i> Pasang Iklan</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('iklan') }}"><i class="small material-icons">add</i> Pasang Iklan</a></li>
                         @else
                         <li class="nav-item dropdown btn-group">
+                            <a class="nav-link" href="{{ url('iklan') }}"><i class="small material-icons">add</i> Pasang Iklan</a>
                             <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} </a>
+
                             <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenu1">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
                                 </a>
@@ -210,8 +336,9 @@ input::-webkit-input-placeholder {
 
     <div class="container-fluid" >
      <img src="{{ asset('/img/ftr-top-bg.png') }}">
+      <a href="#" class="sf-back-to-top"><span class="arrow"></span>Top</a>
     </div>
-
+   
 <!--Footer-->
     <footer class="page-footer center-on-small-only" style="margin-top: 0px;">
         
@@ -305,7 +432,37 @@ input::-webkit-input-placeholder {
     new WOW().init();
     </script>
     @yield('modal')
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $('#material-tabs').each(function() {
 
+                var $active, $content, $links = $(this).find('a');
+
+                $active = $($links[0]);
+                $active.addClass('active');
+
+                $content = $($active[0].hash);
+
+                $links.not($active).each(function() {
+                        $(this.hash).hide();
+                });
+
+                $(this).on('click', 'a', function(e) {
+
+                        $active.removeClass('active');
+                        $content.hide();
+
+                        $active = $(this);
+                        $content = $(this.hash);
+
+                        $active.addClass('active');
+                        $content.show();
+
+                        e.preventDefault();
+                });
+        });
+});
+    </script>
 </body>
 
 </html>

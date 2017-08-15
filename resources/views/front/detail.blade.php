@@ -4,9 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="card" style="display: inline; height: 50px; width: 100%; padding: 5px;">
-			<a href="#">
-			<b> Novel <strong> / </strong></b> <b> Agama <strong> / </strong></b> <b> Technology <strong> / </strong></b> <b> Sains <strong> / </strong></b><b> Sejarah <strong> / </strong></b> <b> Komik <strong> / </strong></b> 
-			</a>
+			<b><strong>Novel / </strong></b>
 		</div>
 	</div>
 	<br>

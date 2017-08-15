@@ -26,11 +26,11 @@
                     <?php 
                        foreach ($category as $value) {  
                     ?>
-                        <div class="col-lg-3" >
+                        <div class="col-lg-2" >
                             <div style="border: none; margin-bottom: 0px; padding-bottom: 0px;">
                                 <!--Card image-->
                                 <div class="view overlay hm-white-slight">
-                                    <a href="{{ url('/category/'.$value->category) }}">
+                                    <a href="{{ url('/category/'.$value->id) }}">
                                     <img src="{{asset('img/buku.png')}}" class="img-fluid" alt="">
                                     <p align="center"><b>{{ $value->category }}</b></p>
                                     </a>

@@ -20,6 +20,8 @@ Route::get('/', 'Welcome@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/iklan', 'IklanController@index')->name('home');
+
 Route::get('social/login/redirect/{provider}', ['uses' => 'Auth\LoginController@redirectToProvider', 'as' => 'social.login']);
 Route::get('social/login/{provider}', 'Auth\LoginController@handleProviderCallback');
 
