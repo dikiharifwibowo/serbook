@@ -11,6 +11,7 @@ class Category extends Controller
 	public function slugcategory($category) {
 		$result = Tb_buku::join('tb_categories', 'tb_categories.id', '=', 'tb_bukus.category_id')
 		->where('tb_categories.category', 'like', "%$category%")
+        ->orwhere('tb_bukus.provinsi', 'like', "%$category%")
 		->paginate(8);
         return view('front.category',['category' => $result]);
     }

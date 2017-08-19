@@ -30,7 +30,7 @@
                             <div style="border: none; margin-bottom: 0px; padding-bottom: 0px;">
                                 <!--Card image-->
                                 <div class="view overlay hm-white-slight">
-                                    <a href="{{ url('/category/'.$value->id) }}">
+                                    <a href="{{ url('/category/'.$value->category) }}">
                                     <img src="{{asset('img/buku.png')}}" class="img-fluid" alt="">
                                     <p align="center"><b>{{ $value->category }}</b></p>
                                     </a>

@@ -16,4 +16,7 @@ class Tb_buku extends Model
     	//belongsTo
     	//belingsMany
     }
+    public function user() {
+    	return $this->belongsTo(User::class);
+    }
 }

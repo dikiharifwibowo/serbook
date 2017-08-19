@@ -25,7 +25,7 @@
         @if (Request::segment(2) === null)
             <h2 align="center">Pencarian berdasarkan "{{ $cari }}"</h2>
         @else
-            <h2 align="center">Buku Berdasarkan Kategori "{{ Request::segment(2) }}"</h2>
+            <h2 align="center">Buku Berdasarkan  "{{ Request::segment(2) }}"</h2>
         @endif  
         <hr>
         <div class="row">
@@ -38,10 +38,11 @@
                         <!--Card image-->
                         <div class="view overlay hm-white-slight">
                         	<a href="{{ url('/'.$post['judul']) }}">
-	                            <img style="height: 280px; width: 100%;" src="http://i.imgur.com/eQh9otF.png" class="img-fluid" alt="">
+	                            <img style="height: 280px; width: 100%;" src="{{ asset('img/iklan/'.$post['cover']) }}" class="img-fluid" alt="">
 	                            <p align="center" style="margin: 10px;">
 	                            <b style="" class="card-title"><strong><?php echo substr(strip_tags($post['judul']),0,100); ?></strong></b>
-	                            <p style="margin: 2px;" align="center">Rp. 70.000</p>
+	                            <p style="margin: 2px;" align="center">Rp. 70.000</p><br>
+                                <p style="margin: 2px;" align="center">{{$post['provinsi']}}</p>
                             </a>
                         </p>
                         </div>

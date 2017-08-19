@@ -290,11 +290,11 @@ input::-webkit-input-placeholder {
             <span class="navbar-toggler-icon"></span>
          
             </button>
-               <a class="navbar-brand"  href="{{url('/')}}">
+               <!-- <a class="navbar-brand"  href="{{url('/')}}">
 
                 <strong><img src="#" style="width: 80px; height: 30px;" ></strong>
 
-            </a>
+            </a> -->
             <div class="collapse navbar-collapse" id="navbarNav1">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -307,10 +307,10 @@ input::-webkit-input-placeholder {
                 <ul class="navbar-nav">
                         @if (Auth::guest())
                             <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><i class="small material-icons">perm_identity</i> Akun Saya</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('iklan') }}"><i class="small material-icons">add</i> Pasang Iklan</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url('iklan') }}"><i class="small material-icons">add</i> Pasang Iklan</a></li>
                         @else
                         <li class="nav-item dropdown btn-group">
-                            <a class="nav-link" href="{{ url('iklan') }}"><i class="small material-icons">add</i> Pasang Iklan</a>
+                            <a class="nav-link" href="{{ url ('iklan') }}"><i class="small material-icons">add</i> Pasang Iklan</a>
                             <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} </a>
 
                             <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenu1">
@@ -335,7 +335,7 @@ input::-webkit-input-placeholder {
     @yield('content')
 
     <div class="container-fluid" >
-     <img src="{{ asset('/img/ftr-top-bg.png') }}">
+     <img style="width: 1300px;" src="{{ asset('/img/ftr-top-bg.png') }}">
       <a href="#" class="sf-back-to-top"><span class="arrow"></span>Top</a>
     </div>
    
@@ -348,8 +348,8 @@ input::-webkit-input-placeholder {
 
                 <!--First column-->
                 <div class="col-lg-3 offset-lg-1 hidden-lg-down">
-                    <h5 class="title">ABOUT MATERIAL DESIGN</h5>
-                    <p>Material Design (codenamed Quantum Paper) is a design language developed by Google. </p>
+                    <h5 class="title">ABOUT SERBOOK.CO.ID</h5>
+                    <p>Serbook.co.id adalah Start Up yang mencoba memecahkan masalah keterbatasan akses pada buku dan menumbuhkan minat baca buku </p>
                 </div>
                 <!--/.First column-->
 
@@ -463,6 +463,26 @@ input::-webkit-input-placeholder {
         });
 });
     </script>
+    <script type="text/javascript">
+
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#showgambar').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#inputgambar").change(function () {
+        readURL(this);
+    });
+
+</script>
+
 </body>
 
 </html>

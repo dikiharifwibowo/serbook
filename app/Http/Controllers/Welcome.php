@@ -13,4 +13,7 @@ class Welcome extends Controller
 	    return view('welcome', ['category' => $category]);
 	}
 
+	public function save() {
+		
+	}
 }

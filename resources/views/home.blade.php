@@ -19,12 +19,9 @@
 
     <div class="tab-content">
         <div id="tab1">
-            <p>There are three basic ideas invoved in creating these tabs:</p>
-            <ol>
-                <li>Use anchor tags as tabs.</li>
-                <li>Use a span class for the tab highlight.</li>
-              <li>In your CSS, adjust the <strong>position</strong> of the highlight, as well as it's <strong>width</strong>, by detecting the anchor tag with an 'active' class. Then adjust its left property and width property. Add a transition in your CSS, <em>et voil&agrave;</em>.</li>
-            </ol>
+            <p align="center" style="height: 200px; ">
+                <a href="{{ url('/iklan') }}" class="btn btn-info btn-lg"><i class="small material-icons">add</i> Pasang Iklan</a>
+            </p>
         </div>
         <div id="tab2">
              <p>There are three basic ideas invoved in creating these tabs:</p>
