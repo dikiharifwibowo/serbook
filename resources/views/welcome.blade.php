@@ -9,8 +9,11 @@
             <li class="nav nav-item">
                 <form class="nav-link" action="{{ url('search') }}" method="post" style="margin: 0px; padding: 0px;">
                     {{ csrf_field() }}
-                    <input type="search" style="background: #ededed url('{{ asset('theme/img/sprite-hm.png') }}') no-repeat 8px -58px;" id="search1" name="search" placeholder="Semua Provinsi"  data-toggle="modal" data-target="#myModal">
+                    <input type="search" style="background: #ededed url('{{ asset('theme/img/sprite-hm.png') }}') no-repeat 8px -58px;" id="search1" name="provinsi" placeholder="Semua Provinsi"  data-toggle="modal" data-target="#myModal">
                     <input type="search" name="search" placeholder="2.569.870 Buku di Sekitar Anda">
+                    <button class="btn btn-primary"  style="height: 50px; -webkit-border-radius: 10em;
+                        -moz-border-radius: 10em;
+                        border-radius: 10em;">Cari</button>
                 </form>
              </li>
             <br>

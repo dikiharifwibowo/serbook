@@ -175,7 +175,7 @@ input[type=search] {
     background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
     border: solid 1px #ccc;
     padding: 9px 10px 9px 32px;
-     width: 700px;
+     width: 600px;
     -webkit-border-radius: 10em;
     -moz-border-radius: 10em;
     border-radius: 10em;
@@ -290,11 +290,9 @@ input::-webkit-input-placeholder {
             <span class="navbar-toggler-icon"></span>
          
             </button>
-               <!-- <a class="navbar-brand"  href="{{url('/')}}">
-
-                <strong><img src="#" style="width: 80px; height: 30px;" ></strong>
-
-            </a> -->
+            <a class="navbar-brand"  href="{{url('/')}}">
+                <strong><img src="{{ asset('img/logo.jpg') }}" style="width: 80px; height: 30px;" ></strong>
+            </a>
             <div class="collapse navbar-collapse" id="navbarNav1">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -482,7 +480,16 @@ input::-webkit-input-placeholder {
     });
 
 </script>
+  <script>
+        
+    $(".recipient-name").click(function(e) {
+    e.preventDefault();
 
+    var clickedValue = $(this).attr('at'); 
+   document.getElementById("search1").value = clickedValue;   
+
+    });
+    </script>
 </body>
 
 </html>

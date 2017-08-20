@@ -19,19 +19,23 @@
 Route::get('/', 'Welcome@index');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::group(['middleware' => 'login'], function () {
 // 	Route::get('/post', 'PostController@index');
 // 	Route::post('/post', 'PostController@save');
 // });
 
-
-Route::get('/iklan', function(){
+Route::group(['middleware' => 'login'], function () {
+	Route::get('/iklan', function(){
 		return view ('front.iklan.formadd');
-	}
-);
-Route::post('/iklan', 'IklanController@save');
+	});
+	Route::post('/iklan', 'IklanController@save');
+	Route::get('/home', 'HomeController@index')->name('home');
+});
+
+
+
+Route::post('/search', 'IklanController@search');
 
 Route::get('social/login/redirect/{provider}', ['uses' => 'Auth\LoginController@redirectToProvider', 'as' => 'social.login']);
 Route::get('social/login/{provider}', 'Auth\LoginController@handleProviderCallback');

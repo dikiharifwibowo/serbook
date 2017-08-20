@@ -23,54 +23,54 @@
                     <div class="col-lg-3">
                         <ul>
                             <li><b><strong>Semua Provinsi</strong></b></li>
-                            <li><a href="#">DI Aceh</a></li>
-                            <li><a href="#">Sumatera Utara</a></li>
-                            <li><a href="#">Sumatera Barat</a></li>
-                            <li><a href="#">Riau</a></li>
-                            <li><a href="#">Kepulauan Riau</a></li>
-                            <li><a href="#">Kepulauan Bangka Belitung</a></li>
-                            <li><a href="#">Jambi</a></li>
-                            <li><a href="#">Bengkulu</a></li>
+                            <li ><a href="#" data-dismiss="modal" class="recipient-name" at="aceh">DI Aceh</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="sumut">Sumatera Utara</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="sumbar">Sumatera Barat</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="riau">Riau</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="kepriau">Kepulauan Riau</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="kepbangka">Kepulauan Bangka Belitung</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="jambi">Jambi</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="bengkulu">Bengkulu</a></li>
                            
                         </ul>
 
                     </div>
                      <div class="col-lg-3">
                         <ul>
-                            <li><a href="#">Lampung</a></li>
-                            <li><a href="#">DKI Jakarta</a></li>
-                            <li><a href="#">Jawa Barat</a></li>
-                            <li><a href="#">Banten</a></li>
-                            <li><a href="#">Jawa Tengah</a></li>
-                            <li><a href="#">DI Yogyakarta</a></li>
-                            <li><a href="#">Jawa Timur</a></li>
-                            <li><a href="#">Kalimantan Barat</a></li>
-                            <li><a href="#">Kalimantan Tengah</a></li>
-                            <li><a href="#">Kalimantan Utara</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="lampung">Lampung</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="jakarta">DKI Jakarta</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="jabar">Jawa Barat</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="banten">Banten</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="jateng">Jawa Tengah</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="yogyakarta">DI Yogyakarta</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="jatim">Jawa Timur</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="kalbar">Kalimantan Barat</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="kalteng">Kalimantan Tengah</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="kalut">Kalimantan Utara</a></li>
                         </ul>
 
                     </div>
                      <div class="col-lg-3">
                         <ul>
-                            <li><a href="#">Kalimantan Timur</a></li>
-                            <li><a href="#">Kalimantan Selatan</a></li>
-                            <li><a href="#">Bali</a></li>
-                            <li><a href="#">Nusa Tenggara Barat</a></li>
-                            <li><a href="#">Nusa Tenggara Timur</a></li>
-                            <li><a href="#">Sulawesi Utara</a></li>
-                            <li><a href="#">Gorontalo</a></li>
-                            <li><a href="#">Sulawesi Tengah</a></li>
-                            <li><a href="#">Sulawesi Barat</a></li>
-                            <li><a href="#">Sulawesi Tenggara</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="kaltim">Kalimantan Timur</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="kalsem">Kalimantan Selatan</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="bali">Bali</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="ntb">Nusa Tenggara Barat</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="ntt">Nusa Tenggara Timur</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="sulut">Sulawesi Utara</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="gorontalo">Gorontalo</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="sulteng">Sulawesi Tengah</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="sulbar">Sulawesi Barat</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="sultenggara">Sulawesi Tenggara</a></li>
                         </ul>
 
                     </div>
                      <div class="col-lg-3">
                         <ul>
-                            <li><a href="#">Maluku Utara</a></li>
-                            <li><a href="#">Maluku</a></li>
-                            <li><a href="#">Papua Barat</a></li>
-                            <li><a href="#">Papua/Irian Jaya</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="maluk">Maluku Utara</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="maluku">Maluku</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="pabar">Papua Barat</a></li>
+                            <li><a href="#" data-dismiss="modal" class="recipient-name" at="irianjaya">Papua/Irian Jaya</a></li>
                         </ul>
 
                     </div>

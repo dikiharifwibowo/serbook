@@ -4,17 +4,26 @@
 <div class="container">
 	<div class="row">
 		<div class="card" style="display: inline; height: 50px; width: 100%; padding: 5px;">
-			<b><strong>Novel / </strong></b>
+			<?php foreach ($categorynav as $cat) { ?>
+              
+                    <b> <a href="{{ url('category/'.$cat->category) }}"> {{ $cat->category }} </a> / </b>
+
+                <?php } ?>
+            
 		</div>
 	</div>
 	<br>
     <li class="nav nav-item">
-        <form class="nav-link" action="{{ url('search') }}" method="post" style="margin: 0px; padding: 0px;">
+        <li class="nav nav-item">
+                <form class="nav-link" action="{{ url('search') }}" method="post" style="margin: 0px; padding: 0px;">
                     {{ csrf_field() }}
-            <input type="search" style="background: #ededed url('{{ asset('theme/img/sprite-hm.png') }}') no-repeat 8px -58px;"
-" id="search1" name="search" placeholder="Semua Provinsi"  data-toggle="modal" data-target="#myModal">
-            <input type="search" name="search" placeholder="Cari Judul, Pengarang ...">
-        </form>
+                    <input type="search" style="background: #ededed url('{{ asset('theme/img/sprite-hm.png') }}') no-repeat 8px -58px;" id="search1" name="provinsi" placeholder="Semua Provinsi"  data-toggle="modal" data-target="#myModal">
+                    <input type="search" name="search" placeholder="2.569.870 Buku di Sekitar Anda">
+                    <button class="btn btn-primary" style="height: 50px; -webkit-border-radius: 10em;
+                        -moz-border-radius: 10em;
+                        border-radius: 10em;">Cari</button>
+                </form>
+             </li>
     </li>
 	<br>
 	<div class="row">
@@ -24,7 +33,7 @@
 				<div class="card">
 					<div class="card-block">
 						<h2><strong>{{ $data->judul }}</strong></h2>
-						<i class="large material-icons">location_on</i> {{ $data->provinsi }}   <i class="large material-icons">access_time</i> via HP {{ \Carbon\Carbon::parse($data->updated_at)->format('d M Y')}}, ID iklan: 17682 <i class="large material-icons">stars</i> Favorit    <i class="large material-icons">remove_red_eye</i> dilihat : 1.239 </b>
+						<i class="large material-icons">location_on</i> {{ $data->provinsi }}   <i class="large material-icons">access_time</i> via HP {{ \Carbon\Carbon::parse($data->updated_at)->format('d M Y H:i:s')}}, ID iklan: 17682 <i class="large material-icons">stars</i> Favorit    <i class="large material-icons">remove_red_eye</i> dilihat : 1.239 </b>
 					</div>
 					<div class="card-block">
 						<div class="row">
@@ -61,13 +70,14 @@
 				<div class="card">
 					<div class="card-block">
 						<div class="card-block" style="background-color: #27A5D7; margin-bottom: 3px;">
-							<h4> RP. 40.300 </h4>
+							<h4> RP. {{ $data->harga }} </h4>
 						</div>
 						<div class="card-block" style="background-color: #D9DFE1; margin-bottom: 3px;">
 							<h4> <i class="large material-icons">person_pin</i> {{ $data->user->name }} </h4>
 						</div>
 						<div class="card-block" style="background-color: #D9DFE1; margin-bottom: 3px;">
-							<h4> <i class="large material-icons">phone</i> +628-23287.....</h4>
+							<h4> <i class="large material-icons">phone</i> 
+							{{ $data->handphone }}</h4>
 						</div>
 						<div class="card-block" style="background-color: #D9DFE1;margin-bottom: 3px; ">
 							<h4> <i class="large material-icons">flag</i> Laporkan iklan ini</h4>
