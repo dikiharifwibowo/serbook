@@ -8,6 +8,7 @@ use App\Tb_buku;
 use App\Tb_category;
 use Image;
 use Illuminate\Support\Str; //manggil str utk details artikel
+use App\Http\Controllers\Session;
 
 class IklanController extends Controller
 {
@@ -63,6 +64,7 @@ class IklanController extends Controller
         // ]);
         $categorynav = Tb_category::all();
         $hasil = Tb_buku::where('provinsi', 'like', "%$request->provinsi%")
+        ->where('tb_bukus.status','on')
         ->orWhere([
                     ['judul', 'like', "%$request->search%"],
                     ['penulis', 'like', "%$request->search%"],
@@ -72,5 +74,15 @@ class IklanController extends Controller
         //member::where('nim','15.01.3482')->first() ada juga pake get();
         // return view('front.tech',['tech' => $hasil, 'cari' => $tech]);
         return view('front.category',['category' => $hasil, 'cari' => $request->search,'categorynav' => $categorynav]);
+    }
+
+    public function disable($id){
+        $data = Tb_buku::find($id);
+        $data->status = 'off';
+        
+        if ($data->save()) {
+             return redirect()->back()->with('success','Iklan berhasil di Nonaktifkan');
+        }
+        return redirect()->back()->with('error','Terjadi Kesalahan');
     }
 }

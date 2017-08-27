@@ -1,4 +1,9 @@
 @extends('layouts.app')
+@section('dtcss')
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="">
+ 
+@endsection
 
 @section('content')
 <br><br>
@@ -19,9 +24,34 @@
 
     <div class="tab-content">
         <div id="tab1">
-            <p align="center" style="height: 200px; ">
-                <a href="{{ url('/iklan') }}" class="btn btn-info btn-lg"><i class="small material-icons">add</i> Pasang Iklan</a>
-            </p>
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{session('success')}}
+                </div>
+            @endif
+            <table class="display" cellspacing="0" width="100%" id="table">
+                <thead>
+                    <tr>
+                        <th >Tanggal</th>
+                        <th >Judul</th>
+                        <th >Harga</th>
+                        <th></th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach($data as $item)
+                    <tr>
+                        <td>{{ $item->created_at}}</td>
+                        <td>{{ $item->judul }}</td>
+                        <td>Rp. {{ $item->harga }}</td>
+                        <td><a href="" class="btn btn-success">Sundul Iklan</a></td>
+                        <td><a href="{{ url($item->slug_judul ) }}"><i class="large material-icons">remove_red_eye</i> View</a> &nbsp &nbsp&nbsp  <a href="{{ url('/iklan/disable/'.$item->id) }}"><i class="large material-icons">delete</i> Nonaktifkan </a>@if($item->status=='off')<i class="large material-icons">highlight_off</i>off @endif</td>
+
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
         </div>
         <div id="tab2">
              <p>There are three basic ideas invoved in creating these tabs:</p>
@@ -52,4 +82,16 @@
     </div>
 </div>
 
+@endsection
+@section('dtjs')
+    <!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+ 
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#table').DataTable();
+        } );
+     </script>
 @endsection

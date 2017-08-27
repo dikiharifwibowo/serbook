@@ -30,6 +30,8 @@ Route::group(['middleware' => 'login'], function () {
 		return view ('front.iklan.formadd');
 	});
 	Route::post('/iklan', 'IklanController@save');
+	Route::get('/iklan/disable/{id}', 'IklanController@disable');
+	//Route::delete('/iklan/{id}', 'IklanController@delete');
 	Route::get('/home', 'HomeController@index')->name('home');
 });
 

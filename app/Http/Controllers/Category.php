@@ -12,6 +12,7 @@ class Category extends Controller
         $categorynav = Tb_category::all();
 		$result = Tb_buku::join('tb_categories', 'tb_categories.id', '=', 'tb_bukus.category_id')
 		->where('tb_categories.category', 'like', "%$category%")
+        ->where('tb_bukus.status','on')
         ->orwhere('tb_bukus.provinsi', 'like', "%$category%")
 		->paginate(8);
         return view('front.category',['category' => $result,'categorynav' => $categorynav]);

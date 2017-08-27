@@ -14,6 +14,10 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+Vue.http.interceptors.push(function (request, next) {
+    request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;
+    next();
+});
 
 Vue.component('example', require('./components/Example.vue'));
 //Vue.component('autocomplete',require('./components/Autocomplete.vue'));
@@ -21,3 +25,4 @@ Vue.component('example', require('./components/Example.vue'));
 const app = new Vue({
     el: '#app'
 });
+

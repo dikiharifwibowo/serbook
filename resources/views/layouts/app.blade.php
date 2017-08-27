@@ -12,8 +12,6 @@
 
     <title>Serbook</title>
 
-
-
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -25,11 +23,16 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('theme/css/bootstrap.min.css') }}" rel="stylesheet">
+
+
     @yield('login')
+    @yield('dtcss')
+
+
     <!-- Material Design Bootstrap -->
     <link href="{{ asset('theme/css/mdb.min.css') }}" rel="stylesheet">
     <!-- Template styles -->
-     <style rel="stylesheet">
+    <style rel="stylesheet">
         /* TEMPLATE STYLES */
         /* Necessary for full page carousel*/
         .sf-back-to-top {
@@ -425,11 +428,17 @@ input::-webkit-input-placeholder {
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="{{ asset('theme/js/mdb.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
-    
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
     <script>
     new WOW().init();
     </script>
     @yield('modal')
+    @yield('dtjs')
+
     <script type="text/javascript">
         $(document).ready(function() {
         $('#material-tabs').each(function() {
