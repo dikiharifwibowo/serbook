@@ -141,6 +141,15 @@ a.sf-back-to-top .arrow:before {
             #catnav{
                 height: 100px;
             }
+            .modal-backdrop { 
+            display: none !important;
+            }
+            #myModalDiv {
+                display: none !important;
+            }
+            .modal-dialog {
+                display: none !important;
+            }
             
         }
         #map {  

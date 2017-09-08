@@ -91,4 +91,13 @@
 
       </div><!-- /Modal content-->
     </div><!-- /Modal -->
+
+    <script type="text/javascript">
+        $(window).on('resize', function() {
+          var win = $(this);
+          if (win.width() > 776) {
+           $('#123').removeClass('btn-lg');
+          } 
+        });
+    </script>
 @endsection
