@@ -128,7 +128,17 @@ a.sf-back-to-top .arrow:before {
             .carousel {
                 height: 100%;
             }
-            
+            #search2{
+                width: 300px;
+            }
+            #imgfooter {
+                display: none;
+            }
+            #category {
+                width: 50%;
+                display: inline-block;
+            }
+
         }
         #map {  
                 max-width: 100%;
@@ -336,7 +346,7 @@ input::-webkit-input-placeholder {
     @yield('content')
 
     <div class="container-fluid" >
-     <img style="width: 1300px;" src="{{ asset('/img/ftr-top-bg.png') }}">
+     <img id="imgfooter" style="width: 1300px;" src="{{ asset('/img/ftr-top-bg.png') }}">
       <a href="#" class="sf-back-to-top"><span class="arrow"></span>Top</a>
     </div>
    

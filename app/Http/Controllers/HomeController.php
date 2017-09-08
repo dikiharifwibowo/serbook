@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Tb_Buku;
+use App\Tb_buku;
 
 class HomeController extends Controller
 {
@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {   
         $id = Auth::id();
-        $buku = Tb_Buku::where('user_id',$id)->get();
+        $buku = Tb_buku::where('user_id',$id)->get();
         return view('home', ['data' => $buku]);
     }
 }
