@@ -138,7 +138,10 @@ a.sf-back-to-top .arrow:before {
                 width: 50%;
                 display: inline-block;
             }
-
+            #catnav{
+                height: 100px;
+            }
+            
         }
         #map {  
                 max-width: 100%;
