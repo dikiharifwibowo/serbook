@@ -29,9 +29,9 @@
         </li>
         <hr> 
         @if (Request::segment(2) === null)
-            <h2 align="center">Pencarian berdasarkan "{{ $cari }}"</h2>
+            <h2 align="center">Pencarian berdasarkan Provinsi</h2>
         @else
-            <h2 align="center">Buku Berdasarkan  "{{ Request::segment(2) }}"</h2>
+            <h2 align="center">Buku Berdasarkan  "{{ $cari }}"</h2>
         @endif  
         <hr>
         <div class="row">
@@ -45,10 +45,18 @@
                         <div class="view overlay hm-white-slight">
                         	<a href="{{ url('/'.$post['judul']) }}">
 	                            <img style="height: 230px; width: 100%;" src="{{ asset('img/iklan/'.$post['cover']) }}" class="img-fluid" alt="">
-	                            <p align="center" style="margin: 10px;">
-	                            <b style="" class="card-title"><strong><?php echo substr(strip_tags($post['judul']),0,100); ?></strong></b>
-	                            <p style="margin: 2px;" align="center">Rp. 70.000</p><br>
-                                <p style="margin: 2px;" align="center">{{$post['provinsi']}}</p>
+	                            <p style="height: 50px;" align="center">
+	                            <b><strong><?php echo substr(strip_tags($post['judul']),0,100); ?></strong></b>
+                                </p>
+	                            <p align="center" style="padding-bottom: 0px; margin-bottom: 0px;">Rp. {{ $post['harga'] }}</p>
+                                @if ($post['harga']==15000)
+                                <p align="center" style="padding-top: 0px; margin-top: 0px;">
+                                    <img src="{{ asset('img/premium.png') }}" height="30px" width="30px">
+                                </p>
+                                @else 
+                                <p align="center" style="padding-top: 30px; margin-top: 0px;"></p>
+                                @endif
+                                <p style="margin: 0px;" align="center">{{$post['provinsi']}}</p>
                             </a>
                         </p>
                         </div>
