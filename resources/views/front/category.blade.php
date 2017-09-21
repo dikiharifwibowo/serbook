@@ -30,8 +30,6 @@
         <hr> 
         @if (Request::segment(2) === null)
             <h2 align="center">Pencarian berdasarkan Provinsi</h2>
-        @else
-            <h2 align="center">Buku Berdasarkan  "{{ $cari }}"</h2>
         @endif  
         <hr>
         <div class="row">

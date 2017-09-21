@@ -69,7 +69,7 @@ class LoginController extends Controller
  
         Auth::login($authUser, true); //cek by fitur auth laravel
 
-        return view('home');
+        return redirect()->route('home');
 
     }
 
