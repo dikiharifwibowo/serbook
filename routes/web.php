@@ -33,6 +33,7 @@ Route::group(['middleware' => 'login'], function () {
 	Route::get('/iklan/disable/{id}', 'IklanController@disable');
 	//Route::delete('/iklan/{id}', 'IklanController@delete');
 	Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/buku', 'HomeController@buku')->name('buku');
 });
 
 

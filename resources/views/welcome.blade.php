@@ -1,10 +1,10 @@
     @extends('layouts.app')
     @extends('layouts.modal')
-        <br>
+
         @section('content')
         <!--Content-->
-        <div class="container">
-        <br><br>
+        <div class="container" style="padding-bottom: 100px;">
+        <br><br><br>
         <img src="{{asset('img/iklan-olx-atas.jpg')}}" class="img-fluid" alt="iklan" style="width: 100%;"><br>
             <li class="nav nav-item">
                 <form class="nav-link" action="{{ url('search') }}" method="post" style="margin: 0px; padding: 0px;">
@@ -33,7 +33,7 @@
                                     <p align="center"><b>{{ $value->category }}</b></p>
                                     </a>
                                 </div>                       
-                          </div>
+                            </div>
                         </div>
                         <?php
                         }
@@ -47,13 +47,10 @@
                </div>
             </div>
         </div>
-     
- </div>
-</div>
-<!--/.Content-->
+         
+     </div>
 
+    <!--/.Content-->
+   @endsection
 
-
-  
-@endsection
 

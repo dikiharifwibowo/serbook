@@ -1,9 +1,10 @@
 @extends('layouts.app')
 @extends('layouts.modal')
 
-<br><br><br>
+
     @section('content')
     <!--Content-->
+    <br><br><br>
     <div class="container">
         <div class="row" id="catnav">
             <div class="card"  style="display: inline;  width: 100%; padding: 5px;">
@@ -69,3 +70,4 @@
     
     </div>
     <!--/.Content-->
+    @endsection

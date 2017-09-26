@@ -28,4 +28,7 @@ class HomeController extends Controller
         $buku = Tb_buku::where('user_id',$id)->get();
         return view('home', ['data' => $buku]);
     }
+    public function buku () {
+        
+    }
 }

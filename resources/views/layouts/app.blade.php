@@ -305,11 +305,11 @@ input::-webkit-input-placeholder {
 
 
 <body>
-<div id=app>
+<div id=app style="background: url('http://static.itc.amcc.or.id/img/pattern.png') bottom repeat-x #f5f5f5;">
 
     <!--Navbar-->
     <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
-        <div class="container">
+        <div class="container" >
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
 
             <span class="navbar-toggler-icon"></span>
@@ -321,7 +321,7 @@ input::-webkit-input-placeholder {
             <div class="collapse navbar-collapse" id="navbarNav1">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="navbar-brand" href="{{url('/')}}">SerBoOk</a>
+                        <a class="navbar-brand" href="{{url('/')}}">Serbook</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link">Cari Buku Cepat Beli Dekat</a>
@@ -357,10 +357,6 @@ input::-webkit-input-placeholder {
     <!--/.Navbar-->    
     @yield('content')
 
-    <div class="container-fluid" >
-     <img id="imgfooter" style="width: 1300px;" src="{{ asset('/img/ftr-top-bg.png') }}">
-      <a href="#" class="sf-back-to-top"><span class="arrow"></span>Top</a>
-    </div>
    
 <!--Footer-->
     <footer class="page-footer center-on-small-only" style="margin-top: 0px;">
@@ -371,7 +367,7 @@ input::-webkit-input-placeholder {
 
                 <!--First column-->
                 <div class="col-lg-3 offset-lg-1 hidden-lg-down">
-                    <h5 class="title">ABOUT SERBOOK.CO.ID</h5>
+                    <h5 class="title">ABOUT SERBOOK.IN</h5>
                     <p>Serbook.co.id adalah Start Up yang mencoba memecahkan masalah keterbatasan akses pada buku dan menumbuhkan minat baca buku </p>
                 </div>
                 <!--/.First column-->
@@ -410,7 +406,7 @@ input::-webkit-input-placeholder {
                     <h5 class="title">Follow me on</h5>
                     <ul>
                         <li><a href="#!">Facebook</a></li>
-                        <li><a href="#!">Instagram</a></li>
+                        <li><a href="https://www.instagram.com/serbook.in/">Instagram</a></li>
                         <li><a href="#!">Twitter</a></li>
                         <li><a href="#!">Pinterest</a></li>
                     </ul>
@@ -425,14 +421,14 @@ input::-webkit-input-placeholder {
          <!--Copyright-->
         <div class="copyright">
             <div class="container-fluid" align="center" style="height: 40px;">
-                © 2017 Copyright: <a href="http://www.MDBootstrap.com" rel="nofollow"> Serbook.com </a><br>
+                © 2017 Copyright:  Serbook.in <br>
 
             </div>
         </div>
         <!--/.Copyright-->
 
     </footer>
-</div>
+
     <!--/.Footer-->
 
     <!-- SCRIPTS -->
@@ -449,7 +445,8 @@ input::-webkit-input-placeholder {
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="{{ asset('theme/js/mdb.min.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
